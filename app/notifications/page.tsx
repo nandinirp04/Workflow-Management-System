@@ -170,14 +170,14 @@ export default function NotificationsPage() {
       {/* Notifications List */}
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="divide-y divide-gray-100 max-h-[70vh] overflow-y-auto">
-          {filteredNotifications.map((notification) => (
-            <div
-              key={notification.id}
-              className={`p-6 hover:bg-gray-50 transition-colors ${
-                notification.read ? "opacity-75" : ""
-              }`}
-            >
-              <div className="flex items-start gap-4">
+         {filteredNotifications.map((notification) => (
+  <div
+    key={notification.id}
+    className={`p-6 hover:bg-gray-50 transition-colors ${
+      notification.read ? "opacity-75" : ""
+    }`}
+  >
+        <div className="flex items-start gap-4">
                 {/* Category Badge */}
                 <div
                   className={`shrink-0 w-3 h-3 rounded-full mt-1 ${
