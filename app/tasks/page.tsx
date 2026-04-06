@@ -137,8 +137,8 @@ export default function TasksPage() {
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-1">Task Manager</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-bold text-zinc-50 mb-1">Task Manager</h1>
+          <p className="text-zinc-100">
             {tasks.length} total • {tasks.filter(t => !t.done).length} pending
           </p>
         </div>
@@ -159,7 +159,7 @@ export default function TasksPage() {
           value={newTask}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setNewTask(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && addTask()}
-          className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none placeholder-gray-500"
+          className="flex-1 px-4 py-3 border text-white border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none placeholder-gray-500"
         />
         <button
           onClick={addTask}
@@ -188,13 +188,13 @@ export default function TasksPage() {
 
       {/* Search */}
       <div className="relative max-w-md">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-50 w-5 h-5" />
         <input
           type="text"
           placeholder="Search tasks..."
           value={searchTerm}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
-          className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none"
+          className="w-full pl-11 pr-4 py-3 border text-white border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none"
         />
       </div>
 
@@ -234,7 +234,7 @@ export default function TasksPage() {
                     >
                       {task.text}
                     </h3>
-                    <div className="flex items-center gap-2 ml-auto flex-shrink-0">
+                    <div className="flex items-center gap-2 ml-auto shrink-0">
                       {task.dueDate && (
                         <div className="text-xs bg-gray-100 px-2 py-1 rounded-full flex items-center gap-1 text-gray-700">
                           <Calendar size={12} />
@@ -255,7 +255,7 @@ export default function TasksPage() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all ml-4 flex-shrink-0">
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all ml-4 shrink-0">
                   <button
                     onClick={() => editTask(task)}
                     className="p-2 hover:bg-indigo-100 rounded-xl text-indigo-600 hover:text-indigo-700 transition-all hover:scale-105"
@@ -371,7 +371,7 @@ export default function TasksPage() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl transition-all hover:shadow-2xl hover:scale-[1.02] flex items-center justify-center gap-2"
+                  className="flex-1 bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl transition-all hover:shadow-2xl hover:scale-[1.02] flex items-center justify-center gap-2"
                 >
                   <Plus size={20} />
                   {editingTask ? "Update Task" : "Create Task"}

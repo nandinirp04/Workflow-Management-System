@@ -93,8 +93,8 @@ export default function CalendarPage() {
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-1">Calendar</h1>
-          <p className="text-gray-600">Manage your appointments and schedule</p>
+          <h1 className="text-3xl font-bold text-zinc-100 mb-1">Calendar</h1>
+          <p className="text-zinc-300">Manage your appointments and schedule</p>
         </div>
         <button
           onClick={() => setShowAddModal(true)}
@@ -109,17 +109,17 @@ export default function CalendarPage() {
       <div className="flex items-center justify-between">
         <button
           onClick={() => setCurrentDate(subMonths(currentDate, 1))}
-          className="p-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors"
+          className="p-2 rounded-lg hover:bg-gray-100 text-zinc-200 hover:text-zinc-500 transition-colors"
           aria-label="Previous month"
         >
           <ChevronLeft size={24} />
         </button>
-        <h2 className="text-2xl font-bold text-gray-900">
+        <h2 className="text-2xl font-bold text-zinc-100">
           {format(currentDate, "MMMM yyyy")}
         </h2>
         <button
           onClick={() => setCurrentDate(addMonths(currentDate, 1))}
-          className="p-2 rounded-lg hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors"
+          className="p-2 rounded-lg hover:bg-gray-100 text-zinc-200 hover:text-zinc-500 transition-colors"
           aria-label="Next month"
         >
           <ChevronRight size={24} />

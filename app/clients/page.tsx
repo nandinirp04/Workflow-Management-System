@@ -118,14 +118,14 @@ export default function ClientsPage() {
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-bold text-zinc-100">
             Clients ({clients.length})
           </h1>
-          <p className="text-gray-600">Manage your client projects and status</p>
+          <p className="text-neutral-300">Manage your client projects and status</p>
         </div>
         <button
           onClick={() => setShowForm(true)}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl font-medium flex items-center gap-2 shadow-lg transition-colors"
+          className="bg-indigo-600 hover:bg-indigo-700 text-zinc-50 px-6 py-2.5 rounded-xl font-medium flex items-center gap-2 shadow-lg transition-colors"
         >
           <Plus size={20} />
           Add Client
@@ -134,13 +134,13 @@ export default function ClientsPage() {
 
       {/* Search */}
       <div className="relative max-w-md">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text- w-5 h-5" />
         <input
           type="text"
-          placeholder="Search clients, projects, or phone..."
+          placeholder="Search clients, pro jects, or phone..."
           value={searchTerm}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
-          className="w-full pl-11 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none"
+          className="w-full pl-11 pr-4 py-3 border text-zinc-100 border-zinc-50 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none"
         />
       </div>
 
